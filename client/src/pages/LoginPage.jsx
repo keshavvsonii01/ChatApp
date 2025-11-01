@@ -2,6 +2,9 @@ import React, { useContext } from 'react'
 import { useState } from 'react'
 import assets from '../assets/assets'
 import { AuthContext } from '../../context/AuthContext'
+
+
+
 const LoginPage = () => {
   const [currState, setCurrState] = useState("Sign Up")
   const [fullName, setFullName] = useState("");
@@ -26,7 +29,10 @@ const LoginPage = () => {
   return (
     <div className='min-h-screen bg-cover bg-center flex items-center justify-center gap-8 sm:justify-evenly max-sm:flex-col backdrop-blur-2xl'>
       {/* ---left-------*/}
-      <img src={assets.logo_big} alt="" className='w-[min(30vw,250px)]' />
+      <div className='flex flex-col items-center'>
+      <img src="/favicon.png" alt="LOGO" className='w-[min(20vw,250px)]' />
+        <h1 className='text-white text-[45px]'>Connext</h1>
+      </div>
 
       {/* --- right ---------*/}
 

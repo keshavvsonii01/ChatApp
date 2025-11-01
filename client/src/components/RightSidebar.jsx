@@ -44,7 +44,7 @@ gap-4 opacity-80'>
             </div>
 
 
-            <button onClick={()=> logout()} className='absolute bottom-5 left-1/2 -translate-x-1/2 bg-[#8184B2] text-white border-none  font-light px-15 py-1 rounded-full cursor-pointer text-sm'>
+            <button onClick={()=> logout()} className='absolute bottom-5 left-1/2 -translate-x-1/2 bg-blue-300 text-white border-none  font-light px-15 py-1 rounded-full cursor-pointer text-sm'>
                 Logout
             </button>
         </div>

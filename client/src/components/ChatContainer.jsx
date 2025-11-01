@@ -28,7 +28,7 @@ const ChatContainer = () => {
             toast.error("select an image file")
             return;
         }
-        const reader = new FileReader(); ////============================================================================================================================ maybe await
+        const reader = new FileReader(); 
 
         reader.onloadend = async () => {
             await sendMessage({ image: reader.result })
@@ -52,9 +52,9 @@ const ChatContainer = () => {
 
 
     return selectedUser ? (
-        <div className='h-full overflow-scroll relative backdrop-blur-lg'>
+        <div className='h-full overflow-scroll relative backdrop-blur-lg '>
             {/* ---------- Chat Header --------------- */}
-            <div className='flex items-center gap-3 py-3 mx-4 border-b border-stone-500'>
+            <div className=' flex items-center gap-3 py-3 mx-4 border-b border-stone-500'>
                 <img src={selectedUser.profilePic || assets.avatar_icon} alt="" className="w-8 rounded-full" />
 
                 <p className='flex-1 text-lg text-white flex items-center gap-2'>
@@ -72,7 +72,7 @@ const ChatContainer = () => {
                 <img src={assets.help_icon} alt="" className='max-md:hidden max-w-5' />
             </div>
             {/* -------------- Chat Messages area -------------- */}
-            <div className='flex flex-col h-[calc(100%-120px) ] overflow-y-scroll p-3 pb-6'>
+            <div className='flex flex-col h-[calc(100%-140px)] overflow-y-scroll p-3 pb-6'>
                 {messages.map((msg, index) => {
                     if (!msg || !msg.senderId) return null;
                     return (
@@ -123,7 +123,7 @@ const ChatContainer = () => {
     ) : (
         <div className='flex flex-col items-center justify-center gap-2 text-gray-500 bg-white/10 max-md:hidden'>
             <img
-                src={assets.logo_icon}
+                src={"/favicon.png"}
                 className='max-w-16'
                 alt=""
             />
